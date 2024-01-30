@@ -10,8 +10,8 @@ char hexaKeys[ROWS][COLS] = {
   {'*','0','#','D'}
 };
 
-byte rowPins[ROWS] = {D0, D1, D2, D3};
-byte colPins[COLS] = {D4, D5, D6, D7};
+byte rowPins[ROWS] = {D7, D6, D5, D4};
+byte colPins[COLS] = {D3, D2, D1, D0};
 
 Keypad customKeypad = Keypad( makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS); 
 
@@ -26,3 +26,14 @@ void loop(){
     Serial.println(customKey);
   }
 }
+
+// KEYPAD  : NodeMCU
+// ================
+// ROW1 (8) : D7 (bebas, deklarasikan variable)
+// ROW2 (7) : D6 (bebas, deklarasikan variable)
+// ROW3 (6) : D5 (bebas, deklarasikan variable)
+// ROW4 (5) : D4 (bebas, deklarasikan variable)
+// COL1 (4) : D3 (bebas, deklarasikan variable)
+// COL2 (3) : D2 (bebas, deklarasikan variable)
+// COL3 (2) : D1 (bebas, deklarasikan variable)
+// COL4 (1) : D0 (bebas, deklarasikan variable)
